@@ -1,26 +1,14 @@
+//This is a main file in which the whole game is starting
+
 #include <iostream>
 #include "structs.h"
 #include "functions.h"
 #include "cpuGame.h"
 #include "pVpGame.h"
+
 using namespace std;
-void test()
-{
-	for (int i = 0; i < 5; i++)
-	{
-		t.tab1_2[0][i] = c.ship;
-		t.tab2_2[0][i] = c.ship;
-	}
-	p1.carrier = 1;
-	p2.carrier = 1;
-	p1.battleship = 0;
-	p1.cruiser = 0;
-	p1.destroyer = 0;
-	p2.battleship = 0;
-	p2.cruiser = 0;
-	p2.destroyer = 0;
-}
-void nextPlayer()
+
+void nextPlayer() //Short function for switching between players
 {
 	char x;
 	cout << "\t\t\t\t\t";
@@ -31,7 +19,7 @@ void nextPlayer()
 	cin >> x;
 	clear();
 }
-int main()
+int main() //Main file
 {
 	int x = 0;
 	bool p1 = 0;
@@ -66,7 +54,6 @@ start:;
 				if (x == 4)
 					break;
 			}
-			//test();
 			rewrite();
 				while (majorCheck() == true)
 				{
