@@ -1,8 +1,9 @@
+//This is the file in which all PvP part is written
 #include "pVpGame.h"
 #include "structs.h"
 
 
-void pMenu(int &x)
+void pMenu(int &x) //Action menu
 {
 	x = 0;
 	cout << "List of Actions: " << endl;
@@ -12,7 +13,7 @@ void pMenu(int &x)
 	cout << "State your choice by writing the number: ";
 	cin >> x;
 }
-bool shot(bool &player)
+bool shot(bool &player) //Function for firing a shot to the board
 {
 	char COORD_X;
 	int COORD_Y;
@@ -35,7 +36,7 @@ start:;
 		t.tab2_1[COORD_X][COORD_Y] = c.shot;
 	return true;
 }
-bool checking(bool &player)
+bool checking(bool &player) //Big function used for checking if the shot can be placed correctly. Plz dont read my garbage
 {
 	int w = 0;
 	int Q;
@@ -127,7 +128,7 @@ bool checking(bool &player)
 			}
 			if (t.shot[0] == 9 && t.shot[1] == 9)
 			{
-				if (t.tab1_2[t.shot[0] - 1][t.shot[1]] == c.ship || t.tab1_2[t.shot[0]][t.shot[1] - 1] == c.ship)
+				if (t.tab1_2[t.shot[0] - 1][t.shot[1]] == c.ship || t.tab1_2[t.shot[0]][t.shot[1] - 1] == c.ship) 
 					w++;
 			}
 			//Walls
@@ -163,7 +164,7 @@ bool checking(bool &player)
 			return 0;
 	}
 }
-void shipCheck(int x, int y, bool player)
+void shipCheck(int x, int y, bool player) //Function responsible for checking the list of ships
 {
 	int q = 1;
 	if (player == 0) // First Player
@@ -254,7 +255,7 @@ void shipCheck(int x, int y, bool player)
 			p2.destroyer--;
 	}
 }
-bool majorCheck()
+bool majorCheck() //Major check if the game can end
 {
 	if (p1.battleship == 0 && p1.carrier == 0 && p1.cruiser == 0 && p1.destroyer == 0)
 	{

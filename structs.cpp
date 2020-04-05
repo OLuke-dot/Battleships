@@ -103,7 +103,7 @@ void display(bool &player)
 	}
 	coordY = 'A';
 	cout << "\n " << endl;
-	//Table for ships (Luckily not sunken)
+	//Table for ships 
 	cout << "\t\t\t\t\t ";
 	for (int x = 0; x < 10; x++)
 		cout << " " << x << " ";

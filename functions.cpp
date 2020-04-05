@@ -1,3 +1,4 @@
+//File responsible for major user functions such as menu function, rule displaying, etc. Also pre-game placing ships
 #include "functions.h"
 #include "structs.h"
 using namespace std;
@@ -102,7 +103,6 @@ start:;
 		sT = 0;
 		cout << "Put your number here: ";
 		cin >> sT;
-		//continue;
 		if (player == 0)
 		{
 			if (!p1.carrier == 0 && sT == 1)
