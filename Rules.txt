@@ -1,0 +1,6 @@
+The board above belongs to CPU. The board below is yours.
+First, choose a ship you want to place. You can choose it by simply writing its number (For ex a 5-boxes long ship 
+write a number 5).
+Place your ships on the board. To place them, write a special character (h -for horizontal or v- for vertical) to 
+rotate your ship.
+Then, write the coordinates
